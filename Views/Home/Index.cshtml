@@ -1,0 +1,139 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<head>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container botondiv dispositivo">
+        <!--- Seleccion de control --->
+        <div class="col-xs-12 btn-group btn-group-justified dispositivo" id="seleccion">
+            <div class="btn-group">
+                <button class="btn ACON btn-block" name="button" value="WW_RCH-3218ND AUTO_ON" id="ac power" onclick="PostBotonPWR(this.id, this.value)">AC ON</button>
+            </div>
+            <div class="btn-group">
+                <button class="btn Samsung btn-block" name="button" value="Samsung_UN32J5500" onclick="actualizarteclas(this.value)">TV</button>                
+            </div>
+            <div class="btn-group">
+                <button class="btn Flow btn-block" name="button" value="Flow" onclick="actualizarteclas(this.value)">Flow</button>
+            </div>
+        </div>
+
+        <!--- Control SAMSUNG --->
+        <div class="col-xs-12 Samsung" id="SamsungControl" hidden>
+            <div class="col-xs-12 btn-group btn-group-justified" id="Samsungprincipal">
+                <div class="btn-group">
+                    <button class="botoncontrol" name="button" value="Samsung_UN32J5500 KEY_POWER" id="samsung power" onclick="PostBotonPWR(this.id, this.value)">TV POWER</button>
+                </div>
+                <div class="btn-group">
+                    <button class="botoncontrol" name="button" value="Samsung_UN32J5500 KEY_MUTE" onclick="PostBoton(this.value)">Mute</button>
+                </div>
+                <div class="btn-group">
+                    <button class="botoncontrol" name="button" value="Samsung_UN32J5500 KEY_SOURCE" onclick="PostBoton(this.value)">Source</button>
+                </div>
+            </div>
+
+            <div class="col-xs-3 btn-group-vertical" id="Samsungvolumen">
+                <div class="btn-group">
+                    <button class="botoncontrol" name="button" value="Samsung_UN32J5500 KEY_VOLUMEUP" onclick="PostBoton(this.value)">VU</button>
+                </div>
+                <div class="btn-group">
+                    <button class="botoncontrol" name="button" value="Samsung_UN32J5500 KEY_VOLUMEDOWN" onclick="PostBoton(this.value)">VD</button>
+                </div>
+            </div> 
+
+            <div class="col-xs-6" id="Samsungdesplazamiento">
+                <div class="row botondiv">          
+                    <div class="btn-group">
+                        <button class="botoncontrol" name="button" value="Samsung_UN32J5500 KEY_SMARTHUB" onclick="PostBoton(this.value)">KEY_SMARTHUB</button>
+                        <button class="botoncontrol" name="button" value="Samsung_UN32J5500 KEY_UP" onclick="PostBoton(this.value)">KEY_UP</button>
+                        <button class="botoncontrol" name="button" value="Samsung_UN32J5500 KEY_MENU" onclick="PostBoton(this.value)">KEY_MENU</button>
+                    </div>
+                </div>
+                <div class="row botondiv">
+                    <div class="btn-group">
+                        <button class="botoncontrol" name="button" value="Samsung_UN32J5500 KEY_LEFT" onclick="PostBoton(this.value)">KEY_LEFT</button>
+                        <button class="botoncontrol" name="button" value="Samsung_UN32J5500 KEY_ENTER" onclick="PostBoton(this.value)">KEY_ENTER</button>
+                        <button class="botoncontrol" name="button" value="Samsung_UN32J5500 KEY_RIGHT" onclick="PostBoton(this.value)">KEY_RIGHT</button>
+                    </div>
+                </div>
+                <div class="row botondiv">
+                    <div class="btn-group">
+                        <button class="botoncontrol" name="button" value="Samsung_UN32J5500 KEY_BACK" onclick="PostBoton(this.value)">KEY_RETURN</button>
+                        <button class="botoncontrol" name="button" value="Samsung_UN32J5500 KEY_DOWN" onclick="PostBoton(this.value)">KEY_DOWN</button>
+                        <button class="botoncontrol" name="button" value="Samsung_UN32J5500 KEY_EXIT" onclick="PostBoton(this.value)">KEY_EXIT</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-3 btn-group-vertical" id="Samsungcanal">
+                <div class="btn-group">
+                    <button class="botoncontrol" name="button" value="Samsung_UN32J5500 KEY_CHANNELUP" onclick="PostBoton(this.value)">CU</button>
+                </div>
+                <div class="btn-group">
+                    <button class="botoncontrol" name="button" value="Samsung_UN32J5500 KEY_CHANNELDOWN" onclick="PostBoton(this.value)">CD</button>
+                </div>
+            </div>
+        </div>
+
+        <!--- Control FLOW --->
+        <div class="col-xs-12 Flow" id="FlowControl" hidden>
+            <div class="col-xs-12 btn-group btn-group-justified" id="Flowprincipal">
+                <div class="btn-group">
+                    <button class="botoncontrol" name="button" value="Flow KEY_POWER" id="Flow power" onclick="PostBotonPWR(this.id, this.value)">TV POWER</button>
+                </div>
+                <div class="btn-group">
+                    <button class="botoncontrol" name="button" value="Flow KEY_MUTE" onclick="PostBoton(this.value)">Mute</button>
+                </div>
+                <div class="btn-group">
+                    <button class="botoncontrol" name="button" value="Flow KEY_SOURCE" onclick="PostBoton(this.value)">Source</button>
+                </div>
+            </div>
+
+            <div class="col-xs-3 btn-group-vertical" id="Flowvolumen">
+                <div class="btn-group">
+                    <button class="botoncontrol" name="button" value="Flow KEY_VOLUMEUP" onclick="PostBoton(this.value)">VU</button>
+                </div>
+                <div class="btn-group">
+                    <button class="botoncontrol" name="button" value="Flow KEY_VOLUMEDOWN" onclick="PostBoton(this.value)">VD</button>
+                </div>
+            </div> 
+
+            <div class="col-xs-6" id="Flowdesplazamiento">
+                <div class="row botondiv">          
+                    <div class="btn-group">
+                        <button class="botoncontrol" name="button" value="Flow KEY_SMARTHUB" onclick="PostBoton(this.value)">KEY_SMARTHUB</button>
+                        <button class="botoncontrol" name="button" value="Flow KEY_UP" onclick="PostBoton(this.value)">KEY_UP</button>
+                        <button class="botoncontrol" name="button" value="Flow KEY_MENU" onclick="PostBoton(this.value)">KEY_MENU</button>
+                    </div>
+                </div>
+                <div class="row botondiv">
+                    <div class="btn-group">
+                        <button class="botoncontrol" name="button" value="Flow KEY_LEFT" onclick="PostBoton(this.value)">KEY_LEFT</button>
+                        <button class="botoncontrol" name="button" value="Flow KEY_ENTER" onclick="PostBoton(this.value)">KEY_ENTER</button>
+                        <button class="botoncontrol" name="button" value="Flow KEY_RIGHT" onclick="PostBoton(this.value)">KEY_RIGHT</button>
+                    </div>
+                </div>
+                <div class="row botondiv">
+                    <div class="btn-group">
+                        <button class="botoncontrol" name="button" value="Flow KEY_BACK" onclick="PostBoton(this.value)">KEY_RETURN</button>
+                        <button class="botoncontrol" name="button" value="Flow KEY_DOWN" onclick="PostBoton(this.value)">KEY_DOWN</button>
+                        <button class="botoncontrol" name="button" value="Flow KEY_EXIT" onclick="PostBoton(this.value)">KEY_EXIT</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-3 btn-group-vertical" id="Flowcanal">
+                <div class="btn-group">
+                    <button class="botoncontrol" name="button" value="Flow KEY_CHANNELUP" onclick="PostBoton(this.value)">CU</button>
+                </div>
+                <div class="btn-group">
+                    <button class="botoncontrol" name="button" value="Flow KEY_CHANNELDOWN" onclick="PostBoton(this.value)">CD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>

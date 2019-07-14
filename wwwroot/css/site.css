@@ -1,0 +1,130 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  background-color: #808080;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+/* Estilos
+-------------------------------------------------- */
+.dispositivo{
+  background-color: rgb(80, 80, 80);
+}
+.ACON{
+  background-color: green;
+}
+.ACOFF{
+  background-color: rgb(116, 3, 3);
+}
+.Samsung{
+  background-color: rgb(19, 18, 97);
+}
+.Flow{
+  background-color: rgb(99, 209, 141);
+}
+
+.botonseleccion{
+  width:70px;
+  height:50px;
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+}
+
+.botoncontrol{
+  width:40px;
+  height:40px;
+  font-size: 10px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(18, 18, 19);
+}
+
+.botondiv{
+  display: grid;
+  align-self: center;
+  text-align: center;
+}
+
+/* Matriz de botones
+-------------------------------------------------- */
+/* The heart of the matter */
+.btn-matrix > .btn:nth-child(3n+4) {
+  clear: left;
+  margin-left: 0;
+}
+.btn-matrix > .btn:nth-child(n+4) {
+  margin-top: -1px;
+}
+.btn-matrix > .btn:first-child {
+  border-bottom-left-radius: 0;
+}
+.btn-matrix > .btn:nth-child(3) {
+  border-top-right-radius: 4px !important;
+}
+.btn-matrix > .btn:nth-last-child(3) {
+  border-bottom-left-radius: 4px !important;
+}
+.btn-matrix > .btn:last-child {
+  border-top-right-radius: 0;
+}
+
+/* Decorations */
+.btn-matrix {
+  margin: 20px;
+}
